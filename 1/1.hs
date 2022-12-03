@@ -5,7 +5,7 @@ import Data.List.Split
 
 main = do  
         content <- readFile "1.txt"
-        let firstPart = foldr (\x y-> if x > y then x else y) 0 $ caloriesByElves content
+        let firstPart  = foldr (\x y-> if x > y then x else y) 0 $ caloriesByElves content
         let secondPart = (\(x:y:z:xs) -> (x + y + z)) $ reverse . sort $ caloriesByElves content
         print firstPart
         print secondPart

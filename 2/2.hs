@@ -5,7 +5,7 @@ import Data.List.Split
 
 main = do  
     content <- readFile "2.txt"
-    let firstPart = sum . map (\(a:_:c:_) -> calcScore a c) $ splitOn "\n" content
+    let firstPart  = sum . map (\(a:_:c:_) -> calcScore a c) $ splitOn "\n" content
     let secondPart = sum .  map (\(a:_:c:_) -> calcScore a (f a c)) $ splitOn "\n" content
 
     print firstPart
