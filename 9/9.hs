@@ -24,7 +24,6 @@ move (direction, count) (tails,(head,tail)) = moved where
     tailPositions = (tail:tails)
     moved         = move (direction, (count - 1)) (tailPositions, (movedHead, movedTail))
 
-
 moveHead :: Char -> Head -> Head
 moveHead 'U' (x,y) = (x, (y + 1))
 moveHead 'D' (x,y) = (x, (y - 1))
